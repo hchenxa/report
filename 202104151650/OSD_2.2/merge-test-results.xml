@@ -1,0 +1,381 @@
+<?xml version="1.0"?>
+<testsuites>
+<testsuite name="Search API: Validate autocomplete" errors="0" failures="0" skipped="0" timestamp="2021-04-15T08:51:09" time="0.762" tests="1">
+  
+  <testcase classname="Search API: Validate autocomplete [P3][Sev3][search][PLACEHOLDER] This test not yet implemented." name="Search API: Validate autocomplete [P3][Sev3][search][PLACEHOLDER] This test not yet implemented." time="0.002"></testcase>
+  
+</testsuite>
+<testsuite name="Search API: Verify access:" errors="0" failures="1" skipped="0" timestamp="2021-04-15T08:51:09" time="35.469" tests="3">
+  
+  <testcase classname="Search API: Verify access: [P1][Sev1][search] should get 401 if authorization header is not present." name="Search API: Verify access: [P1][Sev1][search] should get 401 if authorization header is not present." time="5.031">
+    
+    <failure>: Timeout - Async callback was not invoked within the 5000 ms timeout specified by jest.setTimeout.Timeout - Async callback was not invoked within the 5000 ms timeout specified by jest.setTimeout.Error: 
+    at new Spec (/node_modules/jest-jasmine2/build/jasmine/Spec.js:116:22)
+    at new Spec (/node_modules/jest-jasmine2/build/setup_jest_globals.js:78:9)
+    at specFactory (/node_modules/jest-jasmine2/build/jasmine/Env.js:523:24)
+    at Env.it (/node_modules/jest-jasmine2/build/jasmine/Env.js:592:24)
+    at Env.it (/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:134:23)
+    at test (/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:100:21)
+    at Suite.&lt;anonymous&gt; (/tests/api/access.test.js:39:5)
+    at addSpecsToSuite (/node_modules/jest-jasmine2/build/jasmine/Env.js:444:51)
+    at Env.describe (/node_modules/jest-jasmine2/build/jasmine/Env.js:414:11)
+    at describe (/node_modules/jest-jasmine2/build/jasmine/jasmineLight.js:88:18)
+    at Object.&lt;anonymous&gt; (/tests/api/access.test.js:22:1)
+    at Runtime._execModule (/node_modules/jest-runtime/build/index.js:1299:24)
+    at Runtime._loadModule (/node_modules/jest-runtime/build/index.js:898:12)
+    at Runtime.requireModule (/node_modules/jest-runtime/build/index.js:746:10)
+    at jasmine2 (/node_modules/jest-jasmine2/build/index.js:230:13)
+    at runTestInternal (/node_modules/jest-runner/build/runTest.js:380:22)
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)
+    at runTest (/node_modules/jest-runner/build/runTest.js:472:34)
+    at Object.worker (/node_modules/jest-runner/build/testWorker.js:133:12)</failure>
+    
+  </testcase>
+  
+  <testcase classname="Search API: Verify access: [P1][Sev1][search] should get 401 if authorization header is incorrect." name="Search API: Verify access: [P1][Sev1][search] should get 401 if authorization header is incorrect." time="1.67"></testcase>
+  
+  <testcase classname="Search API: Verify access: [P1][Sev1][search] should return results when searching for kind:pod." name="Search API: Verify access: [P1][Sev1][search] should return results when searching for kind:pod." time="10.445"></testcase>
+  
+</testsuite>
+<testsuite name="RHACM4K-1695: Search - verify managed cluster info in the search page" errors="0" failures="1" skipped="0" timestamp="2021-04-15T08:51:09" time="296.933" tests="42">
+  
+  <testcase classname="RHACM4K-1695: Search - verify managed cluster info in the search page Search - verify managed cluster info in the search page." name="RHACM4K-1695: Search - verify managed cluster info in the search page Search - verify managed cluster info in the search page." time="5.369">
+    
+    <failure>Error: expect(received).toEqual(expected) // deep equality
+
+Expected: &quot;local-cluster&quot;
+Received: &quot;yhliu-aws-test&quot;
+    at Object.&lt;anonymous&gt; (/tests/api/search.test.js:32:57)
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)</failure>
+    
+  </testcase>
+  
+  <testcase classname="RHACM4K-1696: Search - Verify search result with common filter and conditions Verify a deleted pod is recreated." name="RHACM4K-1696: Search - Verify search result with common filter and conditions Verify a deleted pod is recreated." time="44.456"></testcase>
+  
+  <testcase classname="RHACM4K-1696: Search - Verify search result with common filter and conditions Search kind application on specific namespace." name="RHACM4K-1696: Search - Verify search result with common filter and conditions Search kind application on specific namespace." time="6.46"></testcase>
+  
+  <testcase classname="RHACM4K-1696: Search - Verify search result with common filter and conditions Search kind pod and namespace open-cluster-management." name="RHACM4K-1696: Search - Verify search result with common filter and conditions Search kind pod and namespace open-cluster-management." time="1.367"></testcase>
+  
+  <testcase classname="RHACM4K-1696: Search - Verify search result with common filter and conditions Search kind pod on specific cluster." name="RHACM4K-1696: Search - Verify search result with common filter and conditions Search kind pod on specific cluster." time="2.056"></testcase>
+  
+  <testcase classname="RHACM4K-1696: Search - Verify search result with common filter and conditions Search kind:certpolicycontroller." name="RHACM4K-1696: Search - Verify search result with common filter and conditions Search kind:certpolicycontroller." time="1.509"></testcase>
+  
+  <testcase classname="RHACM4K-1696: Search - Verify search result with common filter and conditions Search kind:iampolicycontroller." name="RHACM4K-1696: Search - Verify search result with common filter and conditions Search kind:iampolicycontroller." time="1.121"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by created" name="RHACM4K-1709: Search - Search using filters should filter by created" time="3.85"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by apigroup" name="RHACM4K-1709: Search - Search using filters should filter by apigroup" time="4.417"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by desired" name="RHACM4K-1709: Search - Search using filters should filter by desired" time="12.619"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by current" name="RHACM4K-1709: Search - Search using filters should filter by current" time="2.585"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by ready" name="RHACM4K-1709: Search - Search using filters should filter by ready" time="3.437"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by available" name="RHACM4K-1709: Search - Search using filters should filter by available" time="12.165"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by restarts" name="RHACM4K-1709: Search - Search using filters should filter by restarts" time="18.13"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by parallelism" name="RHACM4K-1709: Search - Search using filters should filter by parallelism" time="1.786"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by completions" name="RHACM4K-1709: Search - Search using filters should filter by completions" time="1.081"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by successful" name="RHACM4K-1709: Search - Search using filters should filter by successful" time="1.189"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by updated" name="RHACM4K-1709: Search - Search using filters should filter by updated" time="1.159"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by cpu" name="RHACM4K-1709: Search - Search using filters should filter by cpu" time="6.724"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by active" name="RHACM4K-1709: Search - Search using filters should filter by active" time="1.625"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by nodes" name="RHACM4K-1709: Search - Search using filters should filter by nodes" time="1.409"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by apiversion" name="RHACM4K-1709: Search - Search using filters should filter by apiversion" time="6.821"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by container" name="RHACM4K-1709: Search - Search using filters should filter by container" time="1.43"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by podIP" name="RHACM4K-1709: Search - Search using filters should filter by podIP" time="1.435"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by hostIP" name="RHACM4K-1709: Search - Search using filters should filter by hostIP" time="8.16"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by kubernetesVersion" name="RHACM4K-1709: Search - Search using filters should filter by kubernetesVersion" time="1.399"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by memory" name="RHACM4K-1709: Search - Search using filters should filter by memory" time="11.167"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by startedAt" name="RHACM4K-1709: Search - Search using filters should filter by startedAt" time="3.696"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by cluster" name="RHACM4K-1709: Search - Search using filters should filter by cluster" time="3.096"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by port" name="RHACM4K-1709: Search - Search using filters should filter by port" time="2.833"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by type" name="RHACM4K-1709: Search - Search using filters should filter by type" time="1.87"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by capacity" name="RHACM4K-1709: Search - Search using filters should filter by capacity" time="1.752"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by clusterIP" name="RHACM4K-1709: Search - Search using filters should filter by clusterIP" time="2.664"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by lastSchedule" name="RHACM4K-1709: Search - Search using filters should filter by lastSchedule" time="3.06"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by suspend" name="RHACM4K-1709: Search - Search using filters should filter by suspend" time="1.403"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by request" name="RHACM4K-1709: Search - Search using filters should filter by request" time="7.349"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by volumeName" name="RHACM4K-1709: Search - Search using filters should filter by volumeName" time="6.431"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by architecture" name="RHACM4K-1709: Search - Search using filters should filter by architecture" time="1.437"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by osImage" name="RHACM4K-1709: Search - Search using filters should filter by osImage" time="2.221"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by claimRef" name="RHACM4K-1709: Search - Search using filters should filter by claimRef" time="8.262"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by reclaimPolicy" name="RHACM4K-1709: Search - Search using filters should filter by reclaimPolicy" time="1.402"></testcase>
+  
+  <testcase classname="RHACM4K-1709: Search - Search using filters should filter by consoleURL" name="RHACM4K-1709: Search - Search using filters should filter by consoleURL" time="1.378"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2021-04-15T08:59:43" tests="0" file="tests/cypress/tests/savedSearches.spec.js" time="0.0000" failures="0"></testsuite>
+<testsuite name="Search: Saved searches" timestamp="2021-04-15T08:59:43" tests="4" time="0.0000" failures="2">
+  
+  <testcase name="Search: Saved searches &quot;before all&quot; hook for &quot;[P2][Sev2][search] should find each managed cluster has default namespace&quot;" time="0.0000" classname="&quot;before all&quot; hook for &quot;[P2][Sev2][search] should find each managed cluster has default namespace&quot;">
+    
+    <failure message="Timed out retrying: Expected to find content: &apos;kube:admin&apos; but never did.
+
+Because this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Search: Saved searches`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail" type="AssertionError"><![CDATA[AssertionError: Timed out retrying: Expected to find content: 'kube:admin' but never did.
+
+Because this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Search: Saved searches`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail
+    at Context.eval (https://multicloud-console.apps.acmqeosd.y0wn.p1.openshiftapps.com/__cypress/tests?p=tests/cypress/support/index.js:2656:46)]]></failure>
+    
+  </testcase>
+  
+  <testcase name="Search: Saved searches &quot;after all&quot; hook for &quot;[P2][Sev2][search] should be able to find the saved searches&quot;" time="0.0000" classname="&quot;after all&quot; hook for &quot;[P2][Sev2][search] should be able to find the saved searches&quot;">
+    
+    <failure message="Timed out retrying: Expected to find element: `.pf-c-title.pf-m-md`, but never found it.
+
+Because this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Search: Saved searches`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail" type="AssertionError"><![CDATA[AssertionError: Timed out retrying: Expected to find element: `.pf-c-title.pf-m-md`, but never found it.
+
+Because this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Search: Saved searches`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail
+    at Object.whenDeleteSavedSearch (https://multicloud-console.apps.acmqeosd.y0wn.p1.openshiftapps.com/__cypress/tests?p=tests/cypress/tests/savedSearches.spec.js:1178:8)
+    at Context.eval (https://multicloud-console.apps.acmqeosd.y0wn.p1.openshiftapps.com/__cypress/tests?p=tests/cypress/tests/savedSearches.spec.js:1001:34)]]></failure>
+    
+  </testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2021-04-15T08:59:03" tests="0" file="tests/cypress/tests/overviewPage.spec.js" time="0.0000" failures="0"></testsuite>
+<testsuite name="Search: Overview page" timestamp="2021-04-15T08:59:03" tests="1" time="0.0000" failures="2">
+  
+  <testcase name="Search: Overview page &quot;before all&quot; hook for &quot;[P1][Sev1][search] should load&quot;" time="0.0000" classname="&quot;before all&quot; hook for &quot;[P1][Sev1][search] should load&quot;">
+    
+    <failure message="Timed out retrying: Expected to find content: &apos;kube:admin&apos; but never did.
+
+Because this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Search: Overview page`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail" type="AssertionError"><![CDATA[AssertionError: Timed out retrying: Expected to find content: 'kube:admin' but never did.
+
+Because this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Search: Overview page`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail
+    at Context.eval (https://multicloud-console.apps.acmqeosd.y0wn.p1.openshiftapps.com/__cypress/tests?p=tests/cypress/support/index.js:2656:46)]]></failure>
+    
+  </testcase>
+  
+  <testcase name="Search: Overview page &quot;after all&quot; hook for &quot;[P1][Sev1][search] should load&quot;" time="0.0000" classname="&quot;after all&quot; hook for &quot;[P1][Sev1][search] should load&quot;">
+    
+    <failure message="expected null to exist
+
+Because this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Search: Overview page`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail" type="AssertionError"><![CDATA[AssertionError: expected null to exist
+
+Because this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Search: Overview page`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail
+    at Context.eval (https://multicloud-console.apps.acmqeosd.y0wn.p1.openshiftapps.com/__cypress/tests?p=tests/cypress/support/index.js:2759:43)]]></failure>
+    
+  </testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2021-04-15T08:57:54" tests="0" file="tests/cypress/tests/filters.spec.js" time="0.0000" failures="0"></testsuite>
+<testsuite name="Search: Search using filters" timestamp="2021-04-15T08:57:54" tests="0" time="0.0000" failures="2">
+  
+  <testcase name="Search: Search using filters [P1][Sev1][search] Search using &quot;name&quot; filter &quot;before all&quot; hook for &quot;should suggest values&quot;" time="0.0000" classname="&quot;before all&quot; hook for &quot;should suggest values&quot;">
+    
+    <failure message="Timed out retrying: Expected to find content: &apos;kube:admin&apos; but never did.
+
+Because this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Search: Search using filters`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail" type="AssertionError"><![CDATA[AssertionError: Timed out retrying: Expected to find content: 'kube:admin' but never did.
+
+Because this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Search: Search using filters`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail
+    at Context.eval (https://multicloud-console.apps.acmqeosd.y0wn.p1.openshiftapps.com/__cypress/tests?p=tests/cypress/support/index.js:2656:46)]]></failure>
+    
+  </testcase>
+  
+  <testcase name="Search: Search using filters [P1][Sev1][search] Search using &quot;status&quot; filter &quot;after all&quot; hook for &quot;should filter by multiple values&quot;" time="0.0000" classname="&quot;after all&quot; hook for &quot;should filter by multiple values&quot;">
+    
+    <failure message="expected null to exist
+
+Because this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Search: Search using filters`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail" type="AssertionError"><![CDATA[AssertionError: expected null to exist
+
+Because this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Search: Search using filters`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail
+    at Context.eval (https://multicloud-console.apps.acmqeosd.y0wn.p1.openshiftapps.com/__cypress/tests?p=tests/cypress/support/index.js:2759:43)]]></failure>
+    
+  </testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2021-04-15T08:58:24" tests="0" file="tests/cypress/tests/linkPage.spec.js" time="0.0000" failures="0"></testsuite>
+<testsuite name="Search: Linked page" timestamp="2021-04-15T08:58:24" tests="2" time="0.0000" failures="2">
+  
+  <testcase name="Search: Linked page &quot;before all&quot; hook for &quot;[P2][Sev2][search] overview page should has link to search page&quot;" time="0.0000" classname="&quot;before all&quot; hook for &quot;[P2][Sev2][search] overview page should has link to search page&quot;">
+    
+    <failure message="Timed out retrying: Expected to find content: &apos;kube:admin&apos; but never did.
+
+Because this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Search: Linked page`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail" type="AssertionError"><![CDATA[AssertionError: Timed out retrying: Expected to find content: 'kube:admin' but never did.
+
+Because this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Search: Linked page`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail
+    at Context.eval (https://multicloud-console.apps.acmqeosd.y0wn.p1.openshiftapps.com/__cypress/tests?p=tests/cypress/support/index.js:2656:46)]]></failure>
+    
+  </testcase>
+  
+  <testcase name="Search: Linked page &quot;after all&quot; hook for &quot;[P2][Sev2][search] clusters page should has link to search page&quot;" time="0.0000" classname="&quot;after all&quot; hook for &quot;[P2][Sev2][search] clusters page should has link to search page&quot;">
+    
+    <failure message="expected null to exist
+
+Because this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Search: Linked page`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail" type="AssertionError"><![CDATA[AssertionError: expected null to exist
+
+Because this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Search: Linked page`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail
+    at Context.eval (https://multicloud-console.apps.acmqeosd.y0wn.p1.openshiftapps.com/__cypress/tests?p=tests/cypress/support/index.js:2759:43)]]></failure>
+    
+  </testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2021-04-15T08:56:37" tests="0" file="tests/cypress/tests/adminSearch.spec.js" time="0.0000" failures="0"></testsuite>
+<testsuite name="Search: Search in Local Cluster" timestamp="2021-04-15T08:56:37" tests="6" time="0.0000" failures="2">
+  
+  <testcase name="Search: Search in Local Cluster &quot;before all&quot; hook for &quot;[P1][Sev1][search] should load the search page&quot;" time="0.0000" classname="&quot;before all&quot; hook for &quot;[P1][Sev1][search] should load the search page&quot;">
+    
+    <failure message="Timed out retrying: Expected to find content: &apos;kube:admin&apos; but never did.
+
+Because this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Search: Search in Local Clu...`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail" type="AssertionError"><![CDATA[AssertionError: Timed out retrying: Expected to find content: 'kube:admin' but never did.
+
+Because this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Search: Search in Local Clu...`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail
+    at Context.eval (https://multicloud-console.apps.acmqeosd.y0wn.p1.openshiftapps.com/__cypress/tests?p=tests/cypress/support/index.js:2656:46)]]></failure>
+    
+  </testcase>
+  
+  <testcase name="Search: Search in Local Cluster search resources &quot;after all&quot; hook for &quot;[P2][Sev2][search] should validate namespace was deleted&quot;" time="0.0000" classname="&quot;after all&quot; hook for &quot;[P2][Sev2][search] should validate namespace was deleted&quot;">
+    
+    <failure message="expected null to exist
+
+Because this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Search: Search in Local Clu...`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail" type="AssertionError"><![CDATA[AssertionError: expected null to exist
+
+Because this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Search: Search in Local Clu...`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail
+    at Context.eval (https://multicloud-console.apps.acmqeosd.y0wn.p1.openshiftapps.com/__cypress/tests?p=tests/cypress/support/index.js:2759:43)]]></failure>
+    
+  </testcase>
+  
+</testsuite>
+<testsuite name="Search: Search in Managed Cluster" timestamp="2021-04-15T08:57:15" tests="6" time="0.0000" failures="2">
+  
+  <testcase name="Search: Search in Managed Cluster &quot;before all&quot; hook for &quot;[P1][Sev1][search] should load the search page&quot;" time="0.0000" classname="&quot;before all&quot; hook for &quot;[P1][Sev1][search] should load the search page&quot;">
+    
+    <failure message="Timed out retrying: Expected to find content: &apos;kube:admin&apos; but never did.
+
+Because this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Search: Search in Managed C...`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail" type="AssertionError"><![CDATA[AssertionError: Timed out retrying: Expected to find content: 'kube:admin' but never did.
+
+Because this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Search: Search in Managed C...`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail
+    at Context.eval (https://multicloud-console.apps.acmqeosd.y0wn.p1.openshiftapps.com/__cypress/tests?p=tests/cypress/support/index.js:2656:46)]]></failure>
+    
+  </testcase>
+  
+  <testcase name="Search: Search in Managed Cluster search resources &quot;after all&quot; hook for &quot;[P2][Sev2][search] should validate namespace was deleted&quot;" time="0.0000" classname="&quot;after all&quot; hook for &quot;[P2][Sev2][search] should validate namespace was deleted&quot;">
+    
+    <failure message="expected null to exist
+
+Because this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Search: Search in Managed C...`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail" type="AssertionError"><![CDATA[AssertionError: expected null to exist
+
+Because this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Search: Search in Managed C...`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail
+    at Context.eval (https://multicloud-console.apps.acmqeosd.y0wn.p1.openshiftapps.com/__cypress/tests?p=tests/cypress/support/index.js:2759:43)]]></failure>
+    
+  </testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2021-04-15T09:00:52" tests="0" file="tests/cypress/tests/suggestedSearches.spec.js" time="0.0000" failures="0"></testsuite>
+<testsuite name="Search: Verify the suggested search templates" timestamp="2021-04-15T09:00:52" tests="3" time="0.0000" failures="2">
+  
+  <testcase name="Search: Verify the suggested search templates &quot;before all&quot; hook for &quot;[P3][Sev3][search] should see the workloads template &amp; search tag in search items&quot;" time="0.0000" classname="&quot;before all&quot; hook for &quot;[P3][Sev3][search] should see the workloads template &amp; search tag in search items&quot;">
+    
+    <failure message="Timed out retrying: Expected to find content: &apos;kube:admin&apos; but never did.
+
+Because this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Search: Verify the suggeste...`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail" type="AssertionError"><![CDATA[AssertionError: Timed out retrying: Expected to find content: 'kube:admin' but never did.
+
+Because this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Search: Verify the suggeste...`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail
+    at Context.eval (https://multicloud-console.apps.acmqeosd.y0wn.p1.openshiftapps.com/__cypress/tests?p=tests/cypress/support/index.js:2656:46)]]></failure>
+    
+  </testcase>
+  
+  <testcase name="Search: Verify the suggested search templates &quot;after all&quot; hook for &quot;[P3][Sev3][search] should see the created last hour template &amp; search tag in search items&quot;" time="0.0000" classname="&quot;after all&quot; hook for &quot;[P3][Sev3][search] should see the created last hour template &amp; search tag in search items&quot;">
+    
+    <failure message="expected null to exist
+
+Because this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Search: Verify the suggeste...`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail" type="AssertionError"><![CDATA[AssertionError: expected null to exist
+
+Because this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Search: Verify the suggeste...`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail
+    at Context.eval (https://multicloud-console.apps.acmqeosd.y0wn.p1.openshiftapps.com/__cypress/tests?p=tests/cypress/support/index.js:2759:43)]]></failure>
+    
+  </testcase>
+  
+</testsuite>
+
+</testsuites>

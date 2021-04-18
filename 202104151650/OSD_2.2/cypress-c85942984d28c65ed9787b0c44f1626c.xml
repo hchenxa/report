@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.0000" tests="3" failures="2">
+  <testsuite name="Root Suite" timestamp="2021-04-15T09:00:52" tests="0" file="tests/cypress/tests/suggestedSearches.spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Search: Verify the suggested search templates" timestamp="2021-04-15T09:00:52" tests="3" time="0.0000" failures="2">
+    <testcase name="Search: Verify the suggested search templates &quot;before all&quot; hook for &quot;[P3][Sev3][search] should see the workloads template &amp; search tag in search items&quot;" time="0.0000" classname="&quot;before all&quot; hook for &quot;[P3][Sev3][search] should see the workloads template &amp; search tag in search items&quot;">
+      <failure message="Timed out retrying: Expected to find content: &apos;kube:admin&apos; but never did.
+
+Because this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Search: Verify the suggeste...`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail" type="AssertionError"><![CDATA[AssertionError: Timed out retrying: Expected to find content: 'kube:admin' but never did.
+
+Because this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Search: Verify the suggeste...`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail
+    at Context.eval (https://multicloud-console.apps.acmqeosd.y0wn.p1.openshiftapps.com/__cypress/tests?p=tests/cypress/support/index.js:2656:46)]]></failure>
+    </testcase>
+    <testcase name="Search: Verify the suggested search templates &quot;after all&quot; hook for &quot;[P3][Sev3][search] should see the created last hour template &amp; search tag in search items&quot;" time="0.0000" classname="&quot;after all&quot; hook for &quot;[P3][Sev3][search] should see the created last hour template &amp; search tag in search items&quot;">
+      <failure message="expected null to exist
+
+Because this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Search: Verify the suggeste...`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail" type="AssertionError"><![CDATA[AssertionError: expected null to exist
+
+Because this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Search: Verify the suggeste...`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail
+    at Context.eval (https://multicloud-console.apps.acmqeosd.y0wn.p1.openshiftapps.com/__cypress/tests?p=tests/cypress/support/index.js:2759:43)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

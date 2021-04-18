@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.0000" tests="12" failures="4">
+  <testsuite name="Root Suite" timestamp="2021-04-15T08:56:37" tests="0" file="tests/cypress/tests/adminSearch.spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Search: Search in Local Cluster" timestamp="2021-04-15T08:56:37" tests="6" time="0.0000" failures="2">
+    <testcase name="Search: Search in Local Cluster &quot;before all&quot; hook for &quot;[P1][Sev1][search] should load the search page&quot;" time="0.0000" classname="&quot;before all&quot; hook for &quot;[P1][Sev1][search] should load the search page&quot;">
+      <failure message="Timed out retrying: Expected to find content: &apos;kube:admin&apos; but never did.
+
+Because this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Search: Search in Local Clu...`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail" type="AssertionError"><![CDATA[AssertionError: Timed out retrying: Expected to find content: 'kube:admin' but never did.
+
+Because this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Search: Search in Local Clu...`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail
+    at Context.eval (https://multicloud-console.apps.acmqeosd.y0wn.p1.openshiftapps.com/__cypress/tests?p=tests/cypress/support/index.js:2656:46)]]></failure>
+    </testcase>
+    <testcase name="Search: Search in Local Cluster search resources &quot;after all&quot; hook for &quot;[P2][Sev2][search] should validate namespace was deleted&quot;" time="0.0000" classname="&quot;after all&quot; hook for &quot;[P2][Sev2][search] should validate namespace was deleted&quot;">
+      <failure message="expected null to exist
+
+Because this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Search: Search in Local Clu...`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail" type="AssertionError"><![CDATA[AssertionError: expected null to exist
+
+Because this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Search: Search in Local Clu...`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail
+    at Context.eval (https://multicloud-console.apps.acmqeosd.y0wn.p1.openshiftapps.com/__cypress/tests?p=tests/cypress/support/index.js:2759:43)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Search: Search in Managed Cluster" timestamp="2021-04-15T08:57:15" tests="6" time="0.0000" failures="2">
+    <testcase name="Search: Search in Managed Cluster &quot;before all&quot; hook for &quot;[P1][Sev1][search] should load the search page&quot;" time="0.0000" classname="&quot;before all&quot; hook for &quot;[P1][Sev1][search] should load the search page&quot;">
+      <failure message="Timed out retrying: Expected to find content: &apos;kube:admin&apos; but never did.
+
+Because this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Search: Search in Managed C...`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail" type="AssertionError"><![CDATA[AssertionError: Timed out retrying: Expected to find content: 'kube:admin' but never did.
+
+Because this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Search: Search in Managed C...`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail
+    at Context.eval (https://multicloud-console.apps.acmqeosd.y0wn.p1.openshiftapps.com/__cypress/tests?p=tests/cypress/support/index.js:2656:46)]]></failure>
+    </testcase>
+    <testcase name="Search: Search in Managed Cluster search resources &quot;after all&quot; hook for &quot;[P2][Sev2][search] should validate namespace was deleted&quot;" time="0.0000" classname="&quot;after all&quot; hook for &quot;[P2][Sev2][search] should validate namespace was deleted&quot;">
+      <failure message="expected null to exist
+
+Because this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Search: Search in Managed C...`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail" type="AssertionError"><![CDATA[AssertionError: expected null to exist
+
+Because this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Search: Search in Managed C...`
+
+Although you have test retries enabled, we do not retry tests when `before all` or `after all` hooks fail
+    at Context.eval (https://multicloud-console.apps.acmqeosd.y0wn.p1.openshiftapps.com/__cypress/tests?p=tests/cypress/support/index.js:2759:43)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
