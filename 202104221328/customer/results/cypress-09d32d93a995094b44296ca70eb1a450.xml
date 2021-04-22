@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="21.1690" tests="3" failures="0">
+  <testsuite name="Root Suite" timestamp="2021-04-22T14:56:58" tests="0" file="tests/cypress/tests/overviewPage.spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Search: Overview page" timestamp="2021-04-22T14:57:05" tests="3" time="21.1690" failures="0">
+    <testcase name="Search: Overview page [P1][Sev1][search] should load the overview page" time="9.7200" classname="[P1][Sev1][search] should load the overview page">
+    </testcase>
+    <testcase name="Search: Overview page [P2][Sev2][search] should have link to search page" time="5.2310" classname="[P2][Sev2][search] should have link to search page">
+    </testcase>
+    <testcase name="Search: Overview page [P2][Sev2][search] add cloud connection action works" time="6.2180" classname="[P2][Sev2][search] add cloud connection action works">
+    </testcase>
+  </testsuite>
+</testsuites>

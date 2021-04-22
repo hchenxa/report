@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="12.9590" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2021-04-22T14:56:11" tests="0" file="tests/cypress/tests/linkPage.spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Search: Linked page" timestamp="2021-04-22T14:56:17" tests="1" time="12.9590" failures="0">
+    <testcase name="Search: Linked page [P2][Sev2][search] clusters page should have link to search page" time="12.9590" classname="[P2][Sev2][search] clusters page should have link to search page">
+    </testcase>
+  </testsuite>
+</testsuites>

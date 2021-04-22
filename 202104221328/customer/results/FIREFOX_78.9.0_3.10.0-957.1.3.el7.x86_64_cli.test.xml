@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="2"
+            tests="1">
+
+  <testsuite name="cli.test"
+    errors="0" failures="2" hostname="" id="" package="cli.test" skipped="3"
+    tests="1" time="0.00001020" timestamp="">
+  
+    <testcase name="[P0][sev1][kui]Visual Web Terminal: Verify user path for rbash" classname="cli.test" time="10.20" assertions="1">  <failure message="Timed out while waiting for element &lt;.kui--input-stripe&gt; to be present for 10000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (10171ms)">    at Page.clear (/usr/src/app/tests/page-objects/KUI.js:240:8)
+    at Page.executeCommand (/usr/src/app/tests/page-objects/KUI.js:91:23)
+    at Object.[P0][sev1][kui]Visual Web Terminal: Verify user path for rbash (/usr/src/app/tests/e2e/cli.test.js:29:9)</failure>
+<system-out>[[ATTACHMENT|/usr/src/app/test-output/e2e/screenshots/cli.test/[P0][sev1][kui]Visual-Web-Terminal:-Verify-user-path-for-rbash_FAILED_Apr-22-2021-133041-GMT+0000-(Coordinated-Universal.png]]</system-out>
+    
+    </testcase>
+  
+
+  
+    <system-err>
+        NightwatchAssertError: Timed out while waiting for element &lt;#inputUsername&gt; to be present for 10000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (10214ms)
+       at Object.api.elements.res (/usr/src/app/tests/page-objects/LoginPage.js:66:9)
+  NightwatchAssertError: Timed out while waiting for element &lt;#inputUsername&gt; to be present for 10000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (10187ms)
+       at Object.api.elements.res (/usr/src/app/tests/page-objects/LoginPage.js:66:9)
+  NightwatchAssertError: Timed out while waiting for element &lt;#inputUsername&gt; to be present for 10000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (10172ms)
+       at Object.api.elements.res (/usr/src/app/tests/page-objects/LoginPage.js:66:9)
+  NightwatchAssertError: Timed out while waiting for element &lt;#inputUsername&gt; to be present for 10000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (10178ms)
+       at Object.api.elements.res (/usr/src/app/tests/page-objects/LoginPage.js:66:9)
+  NightwatchAssertError: Timed out while waiting for element &lt;#inputUsername&gt; to be present for 10000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (10203ms)
+       at Object.api.elements.res (/usr/src/app/tests/page-objects/LoginPage.js:66:9)
+  NightwatchAssertError: Timed out while waiting for element &lt;#inputUsername&gt; to be present for 10000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (10210ms)
+       at Object.api.elements.res (/usr/src/app/tests/page-objects/LoginPage.js:66:9)
+  NightwatchAssertError: Timed out while waiting for element &lt;#inputUsername&gt; to be present for 10000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (10193ms)
+       at Object.api.elements.res (/usr/src/app/tests/page-objects/LoginPage.js:66:9)
+  NightwatchAssertError: Timed out while waiting for element &lt;#inputUsername&gt; to be present for 10000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (10209ms)
+       at Object.api.elements.res (/usr/src/app/tests/page-objects/LoginPage.js:66:9)
+  NightwatchAssertError: Timed out while waiting for element &lt;#inputUsername&gt; to be present for 10000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (10181ms)
+       at Object.api.elements.res (/usr/src/app/tests/page-objects/LoginPage.js:66:9)
+  NightwatchAssertError: Timed out while waiting for element &lt;#inputUsername&gt; to be present for 10000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (10182ms)
+       at Object.api.elements.res (/usr/src/app/tests/page-objects/LoginPage.js:66:9)
+  NightwatchAssertError: Timed out while waiting for element &lt;#inputUsername&gt; to be present for 10000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (10190ms)
+       at Object.api.elements.res (/usr/src/app/tests/page-objects/LoginPage.js:66:9)
+  NightwatchAssertError: Timed out while waiting for element &lt;#inputUsername&gt; to be present for 10000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (10217ms)
+       at Object.api.elements.res (/usr/src/app/tests/page-objects/LoginPage.js:66:9)
+  NightwatchAssertError: Timed out while waiting for element &lt;#inputUsername&gt; to be present for 10000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (10180ms)
+       at Object.api.elements.res (/usr/src/app/tests/page-objects/LoginPage.js:66:9)
+  NightwatchAssertError: Timed out while waiting for element &lt;#inputUsername&gt; to be present for 10000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (10175ms)
+       at Object.api.elements.res (/usr/src/app/tests/page-objects/LoginPage.js:66:9)
+  NightwatchAssertError: Timed out while waiting for element &lt;#inputUsername&gt; to be present for 10000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (10187ms)
+       at Object.api.elements.res (/usr/src/app/tests/page-objects/LoginPage.js:66:9)
+  NightwatchAssertError: Timed out while waiting for element &lt;#inputUsername&gt; to be present for 10000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (10180ms)
+       at Object.api.elements.res (/usr/src/app/tests/page-objects/LoginPage.js:66:9)
+  NightwatchAssertError: Timed out while waiting for element &lt;#inputUsername&gt; to be present for 10000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (10180ms)
+       at Object.api.elements.res (/usr/src/app/tests/page-objects/LoginPage.js:66:9)
+  NightwatchAssertError: Timed out while waiting for element &lt;#inputUsername&gt; to be present for 10000 milliseconds. - expected &#34;found&#34; but got: &#34;not found&#34; (10187ms)
+       at Object.api.elements.res (/usr/src/app/tests/page-objects/LoginPage.js:66:9)
+    </system-err>
+  
+
+    
+
+  
+    
+    <testcase
+      name="[P1][sev1][kui]Visual Web Terminal: Verify supported CLIs can execute" classname="cli.test">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="[P1][sev1][kui]Visual Web Terminal: Verify kubectl" classname="cli.test">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="[P1][sev1][kui]Visual Web Terminal: Verify oc" classname="cli.test">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>

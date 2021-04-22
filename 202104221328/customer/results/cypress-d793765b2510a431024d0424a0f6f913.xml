@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="165.8240" tests="18" failures="0">
+  <testsuite name="Root Suite" timestamp="2021-04-22T14:53:18" tests="0" file="tests/cypress/tests/filters.spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Search: Search using filters" timestamp="2021-04-22T14:53:25" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="[P1][Sev1][search] Search using &quot;name&quot; filter" timestamp="2021-04-22T14:53:28" tests="2" time="77.5440" failures="0">
+    <testcase name="Search: Search using filters [P1][Sev1][search] Search using &quot;name&quot; filter should suggest values" time="20.5250" classname="should suggest values">
+    </testcase>
+    <testcase name="Search: Search using filters [P1][Sev1][search] Search using &quot;name&quot; filter should filter by next suggestion" time="57.0190" classname="should filter by next suggestion">
+    </testcase>
+  </testsuite>
+  <testsuite name="[P1][Sev1][search] Search using &quot;label&quot; filter" timestamp="2021-04-22T14:54:36" tests="2" time="22.5110" failures="0">
+    <testcase name="Search: Search using filters [P1][Sev1][search] Search using &quot;label&quot; filter should suggest values" time="5.1820" classname="should suggest values">
+    </testcase>
+    <testcase name="Search: Search using filters [P1][Sev1][search] Search using &quot;label&quot; filter should filter by next suggestion" time="17.3290" classname="should filter by next suggestion">
+    </testcase>
+  </testsuite>
+  <testsuite name="[P1][Sev1][search] Search using &quot;kind&quot; filter" timestamp="2021-04-22T14:54:59" tests="5" time="28.6630" failures="0">
+    <testcase name="Search: Search using filters [P1][Sev1][search] Search using &quot;kind&quot; filter should suggest values" time="2.8870" classname="should suggest values">
+    </testcase>
+    <testcase name="Search: Search using filters [P1][Sev1][search] Search using &quot;kind&quot; filter should filter by next suggestion" time="4.2560" classname="should filter by next suggestion">
+    </testcase>
+    <testcase name="Search: Search using filters [P1][Sev1][search] Search using &quot;kind&quot; filter should filter by multiple values" time="7.9370" classname="should filter by multiple values">
+    </testcase>
+    <testcase name="Search: Search using filters [P1][Sev1][search] Search using &quot;kind&quot; filter should filter by combination with &quot;next suggestion&quot; value and &quot;name&quot; filter with &quot;next suggestion&quot; value" time="6.7290" classname="should filter by combination with &quot;next suggestion&quot; value and &quot;name&quot; filter with &quot;next suggestion&quot; value">
+    </testcase>
+    <testcase name="Search: Search using filters [P1][Sev1][search] Search using &quot;kind&quot; filter should filter by combination with &quot;next suggestion&quot; value and &quot;label&quot; filter with &quot;next suggestion&quot; value" time="6.8540" classname="should filter by combination with &quot;next suggestion&quot; value and &quot;label&quot; filter with &quot;next suggestion&quot; value">
+    </testcase>
+  </testsuite>
+  <testsuite name="[P1][Sev1][search] Search using &quot;role&quot; filter" timestamp="2021-04-22T14:55:28" tests="4" time="17.7840" failures="0">
+    <testcase name="Search: Search using filters [P1][Sev1][search] Search using &quot;role&quot; filter should suggest values" time="2.8040" classname="should suggest values">
+    </testcase>
+    <testcase name="Search: Search using filters [P1][Sev1][search] Search using &quot;role&quot; filter should filter by master" time="4.0980" classname="should filter by master">
+    </testcase>
+    <testcase name="Search: Search using filters [P1][Sev1][search] Search using &quot;role&quot; filter should filter by worker" time="4.2730" classname="should filter by worker">
+    </testcase>
+    <testcase name="Search: Search using filters [P1][Sev1][search] Search using &quot;role&quot; filter should filter by multiple values" time="6.6090" classname="should filter by multiple values">
+    </testcase>
+  </testsuite>
+  <testsuite name="[P1][Sev1][search] Search using &quot;status&quot; filter" timestamp="2021-04-22T14:55:46" tests="5" time="19.3220" failures="0">
+    <testcase name="Search: Search using filters [P1][Sev1][search] Search using &quot;status&quot; filter should suggest values" time="2.7220" classname="should suggest values">
+    </testcase>
+    <testcase name="Search: Search using filters [P1][Sev1][search] Search using &quot;status&quot; filter should filter by next suggestion" time="3.4470" classname="should filter by next suggestion">
+    </testcase>
+    <testcase name="Search: Search using filters [P1][Sev1][search] Search using &quot;status&quot; filter should suggest values" time="3.0290" classname="should suggest values">
+    </testcase>
+    <testcase name="Search: Search using filters [P1][Sev1][search] Search using &quot;status&quot; filter should filter by next suggestion" time="3.3180" classname="should filter by next suggestion">
+    </testcase>
+    <testcase name="Search: Search using filters [P1][Sev1][search] Search using &quot;status&quot; filter should filter by multiple values" time="6.8060" classname="should filter by multiple values">
+    </testcase>
+  </testsuite>
+</testsuites>

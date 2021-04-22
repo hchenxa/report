@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-22T14:56:11.350Z",
+    "end": "2021-04-22T14:56:53.460Z",
+    "duration": 42110,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "de918537-058c-4e2e-81b2-d5b045a2cc3e",
+      "title": "",
+      "fullFile": "tests/cypress/tests/linkPage.spec.js",
+      "file": "testscypress/tests/linkPage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f0d099b0-567b-4b12-a087-28fe20783359",
+          "title": "Search: Linked page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "[P2][Sev2][search] clusters page should have link to search page",
+              "fullTitle": "Search: Linked page [P2][Sev2][search] clusters page should have link to search page",
+              "timedOut": null,
+              "duration": 12959,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_clusters.clustersPage.shouldHaveLinkToSearchPage();",
+              "err": {},
+              "uuid": "66b71772-f6f2-4aa2-9b7e-8a9a82dd1c5c",
+              "parentUUID": "f0d099b0-567b-4b12-a087-28fe20783359",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "66b71772-f6f2-4aa2-9b7e-8a9a82dd1c5c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12959,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome-report.json",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "results/json",
+        "reportFilename": "mochawesome-report.json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

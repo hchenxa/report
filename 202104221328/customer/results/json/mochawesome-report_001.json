@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-22T14:51:41.745Z",
+    "end": "2021-04-22T14:53:14.751Z",
+    "duration": 93006,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cff551dd-6247-4951-bb96-e700afae91ef",
+      "title": "",
+      "fullFile": "tests/cypress/tests/commonSearch.spec.js",
+      "file": "testscypress/tests/commonSearch.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "59179700-91eb-49c2-842f-507608c4ed83",
+          "title": "RHACM4K-913: Search - common filter and conditions",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "[P1][Sev1][search] should create namespace and application",
+              "fullTitle": "RHACM4K-913: Search - common filter and conditions [P1][Sev1][search] should create namespace and application",
+              "timedOut": null,
+              "duration": 26264,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_cliHelper.cliHelper.createNamespace(this.namespace);\n_cliHelper.cliHelper.createApplication(appName, this.namespace);\ncy.wait(2000); // Adding a wait since to ensure that exec command finishes.\ncy.logout(); // WORKAROUND, we shouldn't need to logout to see new resources. Potential product bug to investigate.\ncy.login();",
+              "err": {},
+              "uuid": "c5682507-89e7-4d71-8ddc-c73f51353a2a",
+              "parentUUID": "59179700-91eb-49c2-842f-507608c4ed83",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "[P2][Sev2][search] should find expected application and delete application",
+              "fullTitle": "RHACM4K-913: Search - common filter and conditions [P2][Sev2][search] should find expected application and delete application",
+              "timedOut": null,
+              "duration": 63722,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_search.searchPage.shouldFindApplicationInNS(appName, this.namespace);\n_search.searchPage.shouldDeleteApplicationInNS(appName, this.namespace);\n_cliHelper.cliHelper.deleteNamespace(this.namespace);",
+              "err": {},
+              "uuid": "22c1b1c9-3b1d-4cc5-a928-261690dcb612",
+              "parentUUID": "59179700-91eb-49c2-842f-507608c4ed83",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c5682507-89e7-4d71-8ddc-c73f51353a2a",
+            "22c1b1c9-3b1d-4cc5-a928-261690dcb612"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 89986,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome-report.json",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "results/json",
+        "reportFilename": "mochawesome-report.json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

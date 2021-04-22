@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="15.8860" tests="3" failures="0">
+  <testsuite name="Root Suite" timestamp="2021-04-22T15:00:06" tests="0" file="tests/cypress/tests/suggestedSearches.spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Search: Verify the suggested search templates" timestamp="2021-04-22T15:00:12" tests="3" time="15.8860" failures="0">
+    <testcase name="Search: Verify the suggested search templates [P3][Sev3][search] should see the workloads template &amp; search tag in search items" time="9.1480" classname="[P3][Sev3][search] should see the workloads template &amp; search tag in search items">
+    </testcase>
+    <testcase name="Search: Verify the suggested search templates [P3][Sev3][search] should see the unhealthy pods template &amp; search tag in search items" time="5.1950" classname="[P3][Sev3][search] should see the unhealthy pods template &amp; search tag in search items">
+    </testcase>
+    <testcase name="Search: Verify the suggested search templates [P3][Sev3][search] should see the created last hour template &amp; search tag in search items" time="1.5430" classname="[P3][Sev3][search] should see the created last hour template &amp; search tag in search items">
+    </testcase>
+  </testsuite>
+</testsuites>
