@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-23T07:45:46.076Z",
+    "end": "2021-04-23T07:46:08.905Z",
+    "duration": 22829,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "44b6dd29-cb1f-4297-8ada-5eb280829707",
+      "title": "",
+      "fullFile": "tests/cypress/tests/overviewPage.spec.js",
+      "file": "testscypress/tests/overviewPage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c4485ab5-ae97-4c5e-a17d-9d504cf1c641",
+          "title": "Search: Overview page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "[P1][Sev1][search] should load the overview page",
+              "fullTitle": "Search: Overview page [P1][Sev1][search] should load the overview page",
+              "timedOut": null,
+              "duration": 8868,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_overview.overviewPage.shouldLoad();",
+              "err": {},
+              "uuid": "66b7befe-4047-48d7-8d6e-fc66070382bf",
+              "parentUUID": "c4485ab5-ae97-4c5e-a17d-9d504cf1c641",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "[P2][Sev2][search] should have link to search page",
+              "fullTitle": "Search: Overview page [P2][Sev2][search] should have link to search page",
+              "timedOut": null,
+              "duration": 5713,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_overview.overviewPage.shouldHaveLinkToSearchPage();",
+              "err": {},
+              "uuid": "082bcc8f-e9e6-4501-8b79-91d6f57b7c46",
+              "parentUUID": "c4485ab5-ae97-4c5e-a17d-9d504cf1c641",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "[P2][Sev2][search] add cloud connection action works",
+              "fullTitle": "Search: Overview page [P2][Sev2][search] add cloud connection action works",
+              "timedOut": null,
+              "duration": 3763,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_overview.overviewPage.whenAddProviderConnectionAction();\n_overview.overviewPage.shouldLoadProviderConnectionPage(); // Going back since the cluster page uses a different DOM element id for the logout\n\ncy.go('back');",
+              "err": {},
+              "uuid": "b6555b9f-03b3-497b-a081-f73895d230cb",
+              "parentUUID": "c4485ab5-ae97-4c5e-a17d-9d504cf1c641",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "66b7befe-4047-48d7-8d6e-fc66070382bf",
+            "082bcc8f-e9e6-4501-8b79-91d6f57b7c46",
+            "b6555b9f-03b3-497b-a081-f73895d230cb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18344,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome-report.json",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "results/json",
+        "reportFilename": "mochawesome-report.json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="64.1130" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2021-04-23T07:41:39" tests="0" file="tests/cypress/tests/commonSearch.spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="RHACM4K-913: Search - common filter and conditions" timestamp="2021-04-23T07:41:45" tests="2" time="64.1130" failures="0">
+    <testcase name="RHACM4K-913: Search - common filter and conditions [P1][Sev1][search] should create namespace and application" time="23.3670" classname="[P1][Sev1][search] should create namespace and application">
+    </testcase>
+    <testcase name="RHACM4K-913: Search - common filter and conditions [P2][Sev2][search] should find expected application and delete application" time="40.7460" classname="[P2][Sev2][search] should find expected application and delete application">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="123.5240" tests="8" failures="0">
+  <testsuite name="Root Suite" timestamp="2021-04-23T07:46:12" tests="0" file="tests/cypress/tests/savedSearches.spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="RHACM4K-412 - Search: Saved searches" timestamp="2021-04-23T07:46:18" tests="8" time="123.5240" failures="0">
+    <testcase name="RHACM4K-412 - Search: Saved searches [P2][Sev2][search] should find each managed cluster has default namespace" time="28.0910" classname="[P2][Sev2][search] should find each managed cluster has default namespace">
+    </testcase>
+    <testcase name="RHACM4K-412 - Search: Saved searches [P2][Sev2][search] should find open-cluster-management-agent namespace exists" time="26.8400" classname="[P2][Sev2][search] should find open-cluster-management-agent namespace exists">
+    </testcase>
+    <testcase name="RHACM4K-412 - Search: Saved searches [P2][Sev2][search] should be able to save current search" time="37.7750" classname="[P2][Sev2][search] should be able to save current search">
+    </testcase>
+    <testcase name="RHACM4K-412 - Search: Saved searches [P2][Sev2][search] should be able to find the saved searches" time="6.7610" classname="[P2][Sev2][search] should be able to find the saved searches">
+    </testcase>
+    <testcase name="RHACM4K-412 - Search: Saved searches [P2][Sev2][search] should be able to edit the saved searches" time="8.4020" classname="[P2][Sev2][search] should be able to edit the saved searches">
+    </testcase>
+    <testcase name="RHACM4K-412 - Search: Saved searches [P2][Sev2][search] should be able to find the saved searches" time="6.1100" classname="[P2][Sev2][search] should be able to find the saved searches">
+    </testcase>
+    <testcase name="RHACM4K-412 - Search: Saved searches [P2][Sev2][search] should be able to revert back the edited saved searches" time="5.3270" classname="[P2][Sev2][search] should be able to revert back the edited saved searches">
+    </testcase>
+    <testcase name="RHACM4K-412 - Search: Saved searches [P2][Sev2][search] should be able to share the saved searches" time="4.2180" classname="[P2][Sev2][search] should be able to share the saved searches">
+    </testcase>
+  </testsuite>
+</testsuites>
