@@ -1,0 +1,2315 @@
+# :warning: Had some failures when running regression on cluster qe1-vmware-pkt with test snapshot 2.4.0-SNAPSHOT-2021-10-02-11-10-03 
+
+## Jenkins job URL: https://tests-jenkins-csb-rhacm.apps.ocp4.prod.psi.redhat.com/job/acmqe-e2e-automation/287/
+
+
+ACM Version: v2.4.0
+
+Hub Cluster Version: 4.9.0-rc.1
+
+Hub Cluster: https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com
+
+Managed Cluster Version: 4.9.0-rc.4
+
+Managed Cluster: https://console-openshift-console.apps.qe4-vmware-pkt.dev02.red-chesterfield.com
+
+Detailed test result on S3: https://s3.console.aws.amazon.com/s3/buckets/acmqe-regression/?region=ap-southeast-1&prefix=data/202110041741/
+
+## Tests:
+
+|Status|Results|Test|
+|---|---|---|
+| :x: | failed | RBAC users to read the Overview page RHACM4K-731[P1][Sev1][observability-usa] Login: search-e2e-admin-cluster user |
+| :x: | failed | RBAC users to read the Overview page RHACM4K-731[P1][Sev1][observability-usa] Logout: search-e2e-admin-cluster user |
+| :x: | failed | RBAC users to read the Overview page RHACM4K-731[P2][Sev2][observability-usa] As an user with name search-e2e-admin-cluster with cluster-role-binding of default admin role, the user can read the Overview page. |
+| :x: | failed | RBAC users to read the Overview page RHACM4K-919[P1][Sev1][observability-usa] Login: search-e2e-view-ns user |
+| :x: | failed | RBAC users to read the Overview page RHACM4K-919[P1][Sev1][observability-usa] Logout: search-e2e-view-ns user |
+| :x: | failed | RBAC users to read the Overview page RHACM4K-919[P2][Sev2][observability-usa] As an user with name search-e2e-view-ns with ns-role-binding of default view role, the user can read the Overview page. |
+| :x: | failed | RBAC users to read the Overview page RHACM4K-920[P1][Sev1][observability-usa] Login: search-e2e-edit-ns user |
+| :x: | failed | RBAC users to read the Overview page RHACM4K-920[P1][Sev1][observability-usa] Logout: search-e2e-edit-ns user |
+| :x: | failed | RBAC users to read the Overview page RHACM4K-920[P2][Sev2][observability-usa] As an user with name search-e2e-edit-ns with ns-role-binding of default edit role, the user can read the Overview page. |
+| :x: | failed | RBAC users to read the Overview page RHACM4K-921[P1][Sev1][observability-usa] Login: search-e2e-admin-ns user |
+| :x: | failed | RBAC users to read the Overview page RHACM4K-921[P1][Sev1][observability-usa] Logout: search-e2e-admin-ns user |
+| :x: | failed | RBAC users to read the Overview page RHACM4K-921[P2][Sev2][observability-usa] As an user with name search-e2e-admin-ns with ns-role-binding of default admin role, the user can read the Overview page. |
+| :x: | failed | RHACKM4K-726: Search: Search in Local Cluster prereq: user should log into the ACM console [P1][Sev1][observability-usa] should login |
+| :x: | failed | RHACKM4K-726: Search: Search in Local Cluster search resource: verify delete function in search result "before each" hook for "[P2][Sev2][observability-usa] should delete deployment" |
+| :x: | failed | RHACM4K-1233: Search: Search in Local Cluster prereq: user should log into the ACM console [P1][Sev1][observability-usa] should login |
+| :x: | failed | RHACM4K-1233: Search: Search in Local Cluster search resources: verify create resource in search "before each" hook for "[P2][Sev2][observability-usa] should load the search page" |
+| :x: | failed | RHACM4K-1262 - Search: multiple managedclusters base tests prereq: user should log into the ACM console [P1][Sev1][observability-usa] should login |
+| :x: | failed | RHACM4K-1262 - Search: multiple managedclusters base tests verify: saved searches function [P2][Sev2][observability-usa] should be able to find the saved searches |
+| :x: | failed | RHACM4K-1262 - Search: multiple managedclusters base tests verify: saved searches function [P2][Sev2][observability-usa] should be able to find the saved searches after logging back in |
+| :x: | failed | RHACM4K-1262 - Search: multiple managedclusters base tests verify: saved searches function [P2][Sev2][observability-usa] should be able to save current search |
+| :x: | failed | RHACM4K-1262 - Search: multiple managedclusters base tests verify: saved searches function [P2][Sev2][observability-usa] should find each managed cluster has default namespace |
+| :x: | failed | RHACM4K-1262 - Search: multiple managedclusters base tests verify: saved searches function [P2][Sev2][observability-usa] should find open-cluster-management-agent namespace exists |
+| :x: | failed | RHACM4K-1262 - Search: multiple managedclusters base tests verify: saved searches function [P2][Sev2][observability-usa] should login |
+| :x: | failed | RHACM4K-1262 - Search: multiple managedclusters base tests verify: saved searches function [P2][Sev2][observability-usa] should logout |
+| :x: | failed | RHACM4K-1419: Search: Overview page UI - overview page link validation "before each" hook for "[P2][Sev2][observability-usa] should have link to welcome page from left nav" |
+| :x: | failed | RHACM4K-1419: Search: Overview page UI - overview page validation "before each" hook for "[P1][Sev1][observability-usa] should load the overview page" |
+| :x: | failed | RHACM4K-1419: Search: Overview page prereq: user should log into the ACM console [P1][Sev1][observability-usa] should login |
+| :x: | failed | RHACM4K-1574: Search: Search in Local Cluster prereq: user should log into the ACM console [P1][Sev1][observability-usa] should login |
+| :x: | failed | RHACM4K-1574: Search: Search in Local Cluster search resources: verify edit yaml function and scale resources "before each" hook for "[P2][Sev2][observability-usa] should delete pod" |
+| :white_check_mark: | passed | RHACM4K-1695: Search - verify managed cluster info in the search page [P1][Sev1][observability-usa] Search - verify managed cluster info in the search page. |
+| :white_check_mark: | passed | RHACM4K-1696: Search - Verify search result with common filter and conditions [P2][Sev2][observability-usa] Search kind application on specific namespace. |
+| :white_check_mark: | passed | RHACM4K-1696: Search - Verify search result with common filter and conditions [P2][Sev2][observability-usa] Search kind pod and namespace open-cluster-management. |
+| :white_check_mark: | passed | RHACM4K-1696: Search - Verify search result with common filter and conditions [P2][Sev2][observability-usa] Search kind pod on specific cluster. |
+| :white_check_mark: | passed | RHACM4K-1696: Search - Verify search result with common filter and conditions [P2][Sev2][observability-usa] Search kind:certpolicycontroller. |
+| :white_check_mark: | passed | RHACM4K-1696: Search - Verify search result with common filter and conditions [P2][Sev2][observability-usa] Search kind:iampolicycontroller. |
+| :white_check_mark: | passed | RHACM4K-1696: Search - Verify search result with common filter and conditions [P2][Sev2][observability-usa] Verify a deleted pod is recreated. |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by active |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by apigroup |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by apiversion |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by architecture |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by available |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by capacity |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by claimRef |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by cluster |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by clusterIP |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by completions |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by consoleURL |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by container |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by cpu |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by created |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by current |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by desired |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by hostIP |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by kubernetesVersion |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by lastSchedule |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by memory |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by nodes |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by osImage |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by parallelism |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by podIP |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by port |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by ready |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by reclaimPolicy |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by request |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by restarts |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by startedAt |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by successful |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by suspend |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by type |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by updated |
+| :white_check_mark: | passed | RHACM4K-1709: Search - Search using filters [P2][Sev2][observability-usa] should filter by volumeName |
+| :x: | failed | RHACM4K-411: Search: Verify the suggested search templates "before each" hook for "[P3][Sev3][observability-usa] should see the workloads template & search tag in search items" |
+| :x: | failed | RHACM4K-411: Search: Verify the suggested search templates prereq: user should log into the ACM console [P1][Sev1][observability-usa] should login |
+| :x: | failed | RHACM4K-411: Search: Verify the suggested search templates verify: overview page link to search page [P3][Sev3][observability-usa] should load the overview page |
+| :x: | failed | RHACM4K-411: Search: Verify the suggested search templates verify: overview page link to search page [P3][Sev3][observability-usa] should navigate to Search page by clicking the search icon on the top right corner of the ACM console |
+| :x: | failed | RHACM4K-412 - Search: Saved searches verify: saved searches resource actions [P2][Sev2][observability-usa] should be able to delete the saved search open-cluster-management-agent search |
+| :x: | failed | RHACM4K-412 - Search: Saved searches verify: saved searches resource actions [P2][Sev2][observability-usa] should be able to delete the saved searches default namespace search |
+| :x: | failed | RHACM4K-412 - Search: Saved searches verify: saved searches resource actions [P2][Sev2][observability-usa] should be able to edit the saved searches |
+| :x: | failed | RHACM4K-412 - Search: Saved searches verify: saved searches resource actions [P2][Sev2][observability-usa] should be able to find the saved searches |
+| :x: | failed | RHACM4K-412 - Search: Saved searches verify: saved searches resource actions [P2][Sev2][observability-usa] should be able to revert back the edited saved searches |
+| :x: | failed | RHACM4K-412 - Search: Saved searches verify: saved searches resource actions [P2][Sev2][observability-usa] should be able to share the saved searches |
+| :x: | failed | RHACM4K-413: Search: Linked page prereq: user should log into the ACM console [P1][Sev1][observability-usa] should login |
+| :x: | failed | RHACM4K-413: Search: Linked page verify: cluster page link to search page [P1][Sev1][observability-usa] should load the cluster page |
+| :x: | failed | RHACM4K-413: Search: Linked page verify: cluster page link to search page [P2][Sev2][observability-usa] clusters page should have link to search page |
+| :x: | failed | RHACM4K-537: Search: Search using filters [P1][Sev1][observability-usa] Search using "kind" filter "before each" hook for "should suggest values" |
+| :x: | failed | RHACM4K-537: Search: Search using filters [P1][Sev1][observability-usa] Search using "label" filter "before each" hook for "should suggest values" |
+| :x: | failed | RHACM4K-537: Search: Search using filters [P1][Sev1][observability-usa] Search using "name" filter "before each" hook for "should suggest values" |
+| :x: | failed | RHACM4K-537: Search: Search using filters [P1][Sev1][observability-usa] Search using "role" filter "before each" hook for "should suggest values" |
+| :x: | failed | RHACM4K-537: Search: Search using filters [P1][Sev1][observability-usa] Search using "status" filter "before each" hook for "should suggest values" |
+| :x: | failed | RHACM4K-537: Search: Search using filters prereq: user should log into the ACM console [P1][Sev1][observability-usa] should login |
+| :x: | failed | RHACM4K-912: Search: Verify the managed cluster info in the search page prereq: user should log into the ACM console [P1][Sev1][observability-usa] should login |
+| :x: | failed | RHACM4K-912: Search: Verify the managed cluster info in the search page verify: managed cluster resource endpoint "before each" hook for "[P3][Sev3][observability-usa] should load the search page" |
+| :white_check_mark: | passed | RHACM4K-913: Search - common filter and conditions [P3][Sev3][observability-usa] should have expected count of pods in kube-system on imported cluster. |
+| :white_check_mark: | passed | RHACM4K-913: Search - common filter and conditions [P3][Sev3][observability-usa] should have expected count of pods in ocm on hub cluster. |
+| :white_check_mark: | passed | RHACM4K-913: Search - common filter and conditions [P3][Sev3][observability-usa] should have expected count of pods in ocm-agent on hub cluster. |
+| :white_check_mark: | passed | RHACM4K-913: Search - common filter and conditions [P3][Sev3][observability-usa] should have expected count of pods in ocm-agent on imported cluster. |
+| :white_check_mark: | passed | RHACM4K-913: Search - common filter and conditions [P3][Sev3][observability-usa] should have expected count of pods in ocm-agent-addon on hub cluster. |
+| :white_check_mark: | passed | RHACM4K-913: Search - common filter and conditions [P3][Sev3][observability-usa] should have expected count of pods in ocm-agent-addon on imported cluster. |
+| :white_check_mark: | passed | RHACM4K-913: Search - common filter and conditions prereq: create resource with oc command and login [P1][Sev1][observability-usa] should create namespace and application |
+| :x: | failed | RHACM4K-913: Search - common filter and conditions prereq: create resource with oc command and login [P1][Sev1][observability-usa] should login |
+| :x: | failed | RHACM4K-913: Search - common filter and conditions verify: search result with common filter and conditions "before each" hook for "[P2][Sev2][observability-usa] should find expected application and delete application" |
+| :white_check_mark: | passed | Search API: Verify access: [P1][Sev1][observability-usa] should get 401 if authorization header is incorrect. |
+| :white_check_mark: | passed | Search API: Verify access: [P1][Sev1][observability-usa] should get 401 if authorization header is not present. |
+| :white_check_mark: | passed | Search API: Verify access: [P1][Sev1][observability-usa] should return results when searching for kind:pod. |
+| :white_check_mark: | passed | Search: Create resource in Local Cluster prereq: create resource with oc command [P1][Sev1][observability-usa] should create deployment resource |
+| :white_check_mark: | passed | Search: Create resource in Local Cluster prereq: create resource with oc command [P1][Sev1][observability-usa] should create namespace resource |
+| :white_check_mark: | passed | Search: Create resource in Local Cluster prereq: create resource with oc command [P1][Sev1][observability-usa] should log into local cluster |
+| :x: | failed | Search: Search in Local Cluster prereq: user should log into the ACM console [P1][Sev1][observability-usa] should login |
+| :x: | failed | Search: Search in Local Cluster search resources: verify resource deployment pod logs "before each" hook for "[P2][Sev2][observability-usa] should see pod logs" |
+| :x: | failed | Search: Search in Local Cluster search resources: verify resource exist after creation "before each" hook for "[P3][Sev3][observability-usa] should have expected count of relationships" |
+
+
+---
+
+### Failed Test Details
+
+#### :x: RBAC users to read the Overview page RHACM4K-731[P1][Sev1][observability-usa] Login: search-e2e-admin-cluster user
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/support/index.js:8183:6)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RBAC users to read the Overview page RHACM4K-731[P1][Sev1][observability-usa] Logout: search-e2e-admin-cluster user
+
+```
+AssertionError: Timed out retrying after 10000ms: Expected to find element: `.pf-c-app-launcher.pf-m-align-right.co-app-launcher.co-user-menu`, but never found it.
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/support/index.js:8272:6)
+```
+
+#### :x: RBAC users to read the Overview page RHACM4K-731[P2][Sev2][observability-usa] As an user with name search-e2e-admin-cluster with cluster-role-binding of default admin role, the user can read the Overview page.
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/overview
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToOverviewPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/12-rbac/01-view-overview-with-rbacuser.spec.js:174:34)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/12-rbac/01-view-overview-with-rbacuser.spec.js:139:30)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RBAC users to read the Overview page RHACM4K-919[P1][Sev1][observability-usa] Login: search-e2e-view-ns user
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/support/index.js:8183:6)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RBAC users to read the Overview page RHACM4K-919[P1][Sev1][observability-usa] Logout: search-e2e-view-ns user
+
+```
+AssertionError: Timed out retrying after 10000ms: Expected to find element: `.pf-c-app-launcher.pf-m-align-right.co-app-launcher.co-user-menu`, but never found it.
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/support/index.js:8272:6)
+```
+
+#### :x: RBAC users to read the Overview page RHACM4K-919[P2][Sev2][observability-usa] As an user with name search-e2e-view-ns with ns-role-binding of default view role, the user can read the Overview page.
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/overview
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToOverviewPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/12-rbac/01-view-overview-with-rbacuser.spec.js:174:34)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/12-rbac/01-view-overview-with-rbacuser.spec.js:139:30)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RBAC users to read the Overview page RHACM4K-920[P1][Sev1][observability-usa] Login: search-e2e-edit-ns user
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/support/index.js:8183:6)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RBAC users to read the Overview page RHACM4K-920[P1][Sev1][observability-usa] Logout: search-e2e-edit-ns user
+
+```
+AssertionError: Timed out retrying after 10000ms: Expected to find element: `.pf-c-app-launcher.pf-m-align-right.co-app-launcher.co-user-menu`, but never found it.
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/support/index.js:8272:6)
+```
+
+#### :x: RBAC users to read the Overview page RHACM4K-920[P2][Sev2][observability-usa] As an user with name search-e2e-edit-ns with ns-role-binding of default edit role, the user can read the Overview page.
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/overview
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToOverviewPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/12-rbac/01-view-overview-with-rbacuser.spec.js:174:34)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/12-rbac/01-view-overview-with-rbacuser.spec.js:139:30)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RBAC users to read the Overview page RHACM4K-921[P1][Sev1][observability-usa] Login: search-e2e-admin-ns user
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/support/index.js:8183:6)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RBAC users to read the Overview page RHACM4K-921[P1][Sev1][observability-usa] Logout: search-e2e-admin-ns user
+
+```
+AssertionError: Timed out retrying after 10000ms: Expected to find element: `.pf-c-app-launcher.pf-m-align-right.co-app-launcher.co-user-menu`, but never found it.
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/support/index.js:8272:6)
+```
+
+#### :x: RBAC users to read the Overview page RHACM4K-921[P2][Sev2][observability-usa] As an user with name search-e2e-admin-ns with ns-role-binding of default admin role, the user can read the Overview page.
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/overview
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToOverviewPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/12-rbac/01-view-overview-with-rbacuser.spec.js:174:34)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/12-rbac/01-view-overview-with-rbacuser.spec.js:139:30)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACKM4K-726: Search: Search in Local Cluster prereq: user should log into the ACM console [P1][Sev1][observability-usa] should login
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/support/index.js:8183:6)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACKM4K-726: Search: Search in Local Cluster search resource: verify delete function in search result "before each" hook for "[P2][Sev2][observability-usa] should delete deployment"
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `search resource: verify del...`
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/05-delete/01-delete-resources.spec.js:441:32)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/05-delete/01-delete-resources.spec.js:298:28)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-1233: Search: Search in Local Cluster prereq: user should log into the ACM console [P1][Sev1][observability-usa] should login
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/support/index.js:8183:6)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-1233: Search: Search in Local Cluster search resources: verify create resource in search "before each" hook for "[P2][Sev2][observability-usa] should load the search page"
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `search resources: verify cr...`
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/03-create/01-create-resource.spec.js:407:32)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/03-create/01-create-resource.spec.js:287:28)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-1262 - Search: multiple managedclusters base tests prereq: user should log into the ACM console [P1][Sev1][observability-usa] should login
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/support/index.js:8183:6)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-1262 - Search: multiple managedclusters base tests verify: saved searches function [P2][Sev2][observability-usa] should be able to find the saved searches
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:455:32)
+    at Object.getSavedSearch (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:402:24)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:192:36)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-1262 - Search: multiple managedclusters base tests verify: saved searches function [P2][Sev2][observability-usa] should be able to find the saved searches after logging back in
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:455:32)
+    at Object.getSavedSearch (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:402:24)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:203:36)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-1262 - Search: multiple managedclusters base tests verify: saved searches function [P2][Sev2][observability-usa] should be able to save current search
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:455:32)
+    at Object.saveClusterNamespaceSearch (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:370:24)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:182:36)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-1262 - Search: multiple managedclusters base tests verify: saved searches function [P2][Sev2][observability-usa] should find each managed cluster has default namespace
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:455:32)
+    at Object.validateClusterNamespace (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:339:24)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:171:36)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-1262 - Search: multiple managedclusters base tests verify: saved searches function [P2][Sev2][observability-usa] should find open-cluster-management-agent namespace exists
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:455:32)
+    at Object.validateClusterNamespace (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:339:24)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:176:36)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-1262 - Search: multiple managedclusters base tests verify: saved searches function [P2][Sev2][observability-usa] should login
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/support/index.js:8183:6)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-1262 - Search: multiple managedclusters base tests verify: saved searches function [P2][Sev2][observability-usa] should logout
+
+```
+AssertionError: Timed out retrying after 10000ms: Expected to find element: `.pf-c-app-launcher.pf-m-align-right.co-app-launcher.co-user-menu`, but never found it.
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/support/index.js:8272:6)
+```
+
+#### :x: RHACM4K-1419: Search: Overview page UI - overview page link validation "before each" hook for "[P2][Sev2][observability-usa] should have link to welcome page from left nav"
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/overview
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `UI - overview page link val...`
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToOverviewPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/08-overview/01-overview-page.spec.js:213:34)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/08-overview/01-overview-page.spec.js:159:30)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-1419: Search: Overview page UI - overview page validation "before each" hook for "[P1][Sev1][observability-usa] should load the overview page"
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/overview
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `UI - overview page validation`
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToOverviewPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/08-overview/01-overview-page.spec.js:213:34)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/08-overview/01-overview-page.spec.js:134:30)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-1419: Search: Overview page prereq: user should log into the ACM console [P1][Sev1][observability-usa] should login
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/support/index.js:8183:6)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-1574: Search: Search in Local Cluster prereq: user should log into the ACM console [P1][Sev1][observability-usa] should login
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/support/index.js:8183:6)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-1574: Search: Search in Local Cluster search resources: verify edit yaml function and scale resources "before each" hook for "[P2][Sev2][observability-usa] should delete pod"
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `search resources: verify ed...`
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/04-edit/01-scale.spec.js:487:32)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/04-edit/01-scale.spec.js:306:28)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-411: Search: Verify the suggested search templates "before each" hook for "[P3][Sev3][observability-usa] should see the workloads template & search tag in search items"
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `RHACM4K-411: Search: Verify...`
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/10-suggested/01-suggested-searches.spec.js:417:32)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/10-suggested/01-suggested-searches.spec.js:178:24)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-411: Search: Verify the suggested search templates prereq: user should log into the ACM console [P1][Sev1][observability-usa] should login
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/support/index.js:8183:6)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-411: Search: Verify the suggested search templates verify: overview page link to search page [P3][Sev3][observability-usa] should load the overview page
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/overview
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToOverviewPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/10-suggested/01-suggested-searches.spec.js:228:34)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/10-suggested/01-suggested-searches.spec.js:169:30)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-411: Search: Verify the suggested search templates verify: overview page link to search page [P3][Sev3][observability-usa] should navigate to Search page by clicking the search icon on the top right corner of the ACM console
+
+```
+AssertionError: Timed out retrying after 10000ms: Expected to find element: `[aria-label="search-button"]`, but never found it.
+    at Object.whenGotoSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/10-suggested/01-suggested-searches.spec.js:230:8)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/10-suggested/01-suggested-searches.spec.js:172:30)
+```
+
+#### :x: RHACM4K-412 - Search: Saved searches verify: saved searches resource actions [P2][Sev2][observability-usa] should be able to delete the saved search open-cluster-management-agent search
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:455:32)
+    at Object.whenDeleteSavedSearch (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:411:24)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:229:36)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-412 - Search: Saved searches verify: saved searches resource actions [P2][Sev2][observability-usa] should be able to delete the saved searches default namespace search
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:455:32)
+    at Object.whenDeleteSavedSearch (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:411:24)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:226:36)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-412 - Search: Saved searches verify: saved searches resource actions [P2][Sev2][observability-usa] should be able to edit the saved searches
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:455:32)
+    at Object.editSavedSearch (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:382:24)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:212:36)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-412 - Search: Saved searches verify: saved searches resource actions [P2][Sev2][observability-usa] should be able to find the saved searches
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:455:32)
+    at Object.getSavedSearch (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:402:24)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:215:36)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-412 - Search: Saved searches verify: saved searches resource actions [P2][Sev2][observability-usa] should be able to revert back the edited saved searches
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:455:32)
+    at Object.editSavedSearch (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:382:24)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:220:36)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-412 - Search: Saved searches verify: saved searches resource actions [P2][Sev2][observability-usa] should be able to share the saved searches
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:455:32)
+    at Object.shareSavedSearch (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:392:24)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/09-saved/01-saved-searches.spec.js:223:36)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-413: Search: Linked page prereq: user should log into the ACM console [P1][Sev1][observability-usa] should login
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/support/index.js:8183:6)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-413: Search: Linked page verify: cluster page link to search page [P1][Sev1][observability-usa] should load the cluster page
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/multicloud/clusters
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToClusterPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/07-link/01-cluster-page-search-link.spec.js:166:8)
+    at Object.shouldLoad (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/07-link/01-cluster-page-search-link.spec.js:169:18)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/07-link/01-cluster-page-search-link.spec.js:134:30)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-413: Search: Linked page verify: cluster page link to search page [P2][Sev2][observability-usa] clusters page should have link to search page
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/multicloud/clusters
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToClusterPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/07-link/01-cluster-page-search-link.spec.js:166:8)
+    at Object.shouldLoad (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/07-link/01-cluster-page-search-link.spec.js:169:18)
+    at Object.shouldHaveLinkToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/07-link/01-cluster-page-search-link.spec.js:174:18)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/07-link/01-cluster-page-search-link.spec.js:137:30)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-537: Search: Search using filters [P1][Sev1][observability-usa] Search using "kind" filter "before each" hook for "should suggest values"
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `[P1][Sev1][observability-us...`
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/06-filter/01-filters.spec.js:465:32)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/06-filter/01-filters.spec.js:343:28)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-537: Search: Search using filters [P1][Sev1][observability-usa] Search using "label" filter "before each" hook for "should suggest values"
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `[P1][Sev1][observability-us...`
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/06-filter/01-filters.spec.js:465:32)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/06-filter/01-filters.spec.js:343:28)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-537: Search: Search using filters [P1][Sev1][observability-usa] Search using "name" filter "before each" hook for "should suggest values"
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `[P1][Sev1][observability-us...`
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/06-filter/01-filters.spec.js:465:32)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/06-filter/01-filters.spec.js:343:28)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-537: Search: Search using filters [P1][Sev1][observability-usa] Search using "role" filter "before each" hook for "should suggest values"
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `[P1][Sev1][observability-us...`
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/06-filter/01-filters.spec.js:465:32)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/06-filter/01-filters.spec.js:343:28)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-537: Search: Search using filters [P1][Sev1][observability-usa] Search using "status" filter "before each" hook for "should suggest values"
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `[P1][Sev1][observability-us...`
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/06-filter/01-filters.spec.js:465:32)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/06-filter/01-filters.spec.js:343:28)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-537: Search: Search using filters prereq: user should log into the ACM console [P1][Sev1][observability-usa] should login
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/support/index.js:8183:6)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-912: Search: Verify the managed cluster info in the search page prereq: user should log into the ACM console [P1][Sev1][observability-usa] should login
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/support/index.js:8183:6)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-912: Search: Verify the managed cluster info in the search page verify: managed cluster resource endpoint "before each" hook for "[P3][Sev3][observability-usa] should load the search page"
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `verify: managed cluster res...`
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/11-managed/01-verify-managed-cluster.spec.js:400:32)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/11-managed/01-verify-managed-cluster.spec.js:275:26)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-913: Search - common filter and conditions prereq: create resource with oc command and login [P1][Sev1][observability-usa] should login
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/support/index.js:8183:6)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: RHACM4K-913: Search - common filter and conditions verify: search result with common filter and conditions "before each" hook for "[P2][Sev2][observability-usa] should find expected application and delete application"
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `verify: search result with ...`
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/01-common/01-common-searches.spec.js:402:32)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/01-common/01-common-searches.spec.js:282:26)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: Search: Search in Local Cluster prereq: user should log into the ACM console [P1][Sev1][observability-usa] should login
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/support/index.js:8183:6)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: Search: Search in Local Cluster search resources: verify resource deployment pod logs "before each" hook for "[P2][Sev2][observability-usa] should see pod logs"
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `search resources: verify re...`
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/02-search/02-pod-logs.spec.js:435:32)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/02-search/02-pod-logs.spec.js:306:28)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
+#### :x: Search: Search in Local Cluster search resources: verify resource exist after creation "before each" hook for "[P3][Sev3][observability-usa] should have expected count of relationships"
+
+```
+CypressError: `cy.visit()` failed trying to load:
+
+https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/search
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: Client network socket disconnected before secure TLS connection was established
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `search resources: verify re...`
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156055:82
+    at visitFailedByErr (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:155414:12)
+    at https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:156054:11
+    at tryCatcher (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:13212:23)
+    at Promise._settlePromiseFromHandler (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11147:31)
+    at Promise._settlePromise (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11204:18)
+    at Promise._settlePromise0 (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11249:10)
+    at Promise._settlePromises (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:11325:18)
+    at _drainQueueStep (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7919:12)
+    at _drainQueue (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7912:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7928:5)
+    at Async.drainQueues (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/runner/cypress_runner.js:7798:14)
+From Your Spec Code:
+    at Object.whenGoToSearchPage (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/02-search/01-search.spec.js:443:32)
+    at Context.eval (https://multicloud-console.apps.qe1-vmware-pkt.dev02.red-chesterfield.com/__cypress/tests?p=tests/cypress/tests/02-search/01-search.spec.js:304:28)
+
+From Node.js Internals:
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:607:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1544:19)
+      at TLSSocket.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+```
+
